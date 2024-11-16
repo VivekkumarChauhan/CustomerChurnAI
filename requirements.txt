@@ -1,0 +1,29 @@
+# Data manipulation
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+
+# Machine learning and deep learning
+xgboost
+lightgbm
+tensorflow
+keras
+
+# Data preprocessing and scaling
+scipy
+category_encoders
+
+# Model evaluation and visualization
+plotly
+joblib
+
+# Deployment
+flask
+streamlit
+
+# Miscellaneous utilities
+jupyter
+notebook
+category_encoders
