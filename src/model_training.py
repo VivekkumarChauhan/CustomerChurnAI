@@ -1,5 +1,3 @@
-# model_training.py
-
 import pandas as pd
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
 from sklearn.ensemble import RandomForestClassifier
@@ -81,6 +79,6 @@ def train_model(data, target_col):
     plt.show()
 
     # Save the model for future use
-    joblib.dump(best_model, 'best_churn_model.pkl')
+    joblib.dump(best_model, 'D:/practice/Customer_Churn_Prediction/models/best_churn_model.pkl')
     
     return best_model, X_test, y_test
