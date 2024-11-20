@@ -1,0 +1,40 @@
+Customer_Churn_Prediction/
+│
+├── data/
+│   ├── raw/                        # Raw data
+│   │   └── telco.csv               # Original dataset (your selected dataset)
+│   ├── processed/                  # Processed data
+│       ├── cleaned_data.csv        # Data after cleaning (e.g., missing value handling)
+│       └── scaled_data.csv         # Final dataset for training (e.g., scaling, encoding)
+│
+├── notebooks/                      # Jupyter Notebooks
+│   ├── 1_data_cleaning.ipynb       # Cleaning and preparing data
+│   ├── 2_eda.ipynb                 # Exploratory Data Analysis (EDA)
+│   ├── 3_feature_engineering.ipynb # Feature creation and selection
+│   ├── 4_model_training.ipynb      # Model training and evaluation
+│   ├── 5_hyperparameter_tuning.ipynb  # Advanced model tuning
+│   └── 6_model_evaluation.ipynb    # Performance evaluation and visualization
+│
+├── src/                            # Python scripts for modularization
+│   ├── preprocessing.py            # Functions for cleaning and preprocessing
+│   ├── eda.py                      # EDA-related utilities
+│   ├── model_training.py           # Functions for training models
+│   ├── evaluation.py               # Performance evaluation utilities
+│   ├── hyperparameter_tuning.py    # Scripts for fine-tuning models
+│   └── utils.py                    # Reusable helper functions
+│
+├── models/                         # Saved models
+│   └── best_churn_model.pkl        # Best-performing model
+│
+├── app/                            # Deployment
+│   ├── app.py                      # Flask/Streamlit application
+│   └── templates/
+│       └── index.html              # Frontend (optional)
+│
+├── artifacts/                      # Visualizations and outputs
+│   ├── confusion_matrix.png        # Confusion matrix plot
+│   ├── roc_curve.png               # ROC curve plot
+│   └── feature_importance.png      # Feature importance visualization
+│
+├── requirements.txt              # Dependencies
+└── README.md                       # Project documentation
