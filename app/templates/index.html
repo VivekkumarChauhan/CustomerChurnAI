@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Customer Churn Prediction</h2>
+    <form action="/predict" method="POST">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+        </select>
+
+        <label for="senior_citizen">Senior Citizen:</label>
+        <select id="senior_citizen" name="senior_citizen">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="married">Married:</label>
+        <select id="married" name="married">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="phone_service">Phone Service:</label>
+        <select id="phone_service" name="phone_service">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="internet_service">Internet Service:</label>
+        <select id="internet_service" name="internet_service">
+            <option value="DSL">DSL</option>
+            <option value="Fiber Optic">Fiber Optic</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="contract">Contract:</label>
+        <select id="contract" name="contract">
+            <option value="Month-to-month">Month-to-month</option>
+            <option value="One year">One year</option>
+            <option value="Two year">Two year</option>
+        </select>
+
+        <label for="tenure_months">Tenure in Months:</label>
+        <input type="number" id="tenure_months" name="tenure_months" required>
+
+        <label for="monthly_charge">Monthly Charge:</label>
+        <input type="number" id="monthly_charge" name="monthly_charge" step="0.01" required>
+
+        <label for="total_charges">Total Charges:</label>
+        <input type="number" id="total_charges" name="total_charges" step="0.01" required>
+
+        <button type="submit">Predict Churn</button>
+    </form>
+
+    {% if prediction is not none %}
+    <div class="result">
+        <p><strong>Churn Prediction:</strong> {{ prediction }}</p>
+        <p><strong>Churn Probability:</strong> {{ prob }}</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
