@@ -1,6 +1,6 @@
 ## License
 
-This project is licensed under the MIT License-see the [LICENSE](LICENSE) file for details .
+This project is licensed under the MIT License-see the [LICENSE](LICENSE) file for details vsvshs.
 
 ## Contributing
 We welcome contributions to enhance **CustomerChurnAI**! If you're interested in contributing, please follow these steps:
